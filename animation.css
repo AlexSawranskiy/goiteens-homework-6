@@ -1,0 +1,42 @@
+.wrapper{
+    margin-top: 100px;
+}
+
+.content-circle{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    left: 0;
+
+    animation: white-circle 2000ms linear infinite alternate;
+}
+
+@keyframes white-circle{
+    0%{
+        left: 0;
+    }
+
+    25%{
+        background-color: red;
+        top: 10px;
+    }
+
+    50%{
+        background-color: aqua;
+        top: 20px;
+    }
+
+    75%{
+        background-color: tomato;
+        top: 30px;
+    }
+
+    100%{
+        left: 500px;
+    }
+}
+
+.content-circle:hover{
+    animation-play-state: paused;
+}

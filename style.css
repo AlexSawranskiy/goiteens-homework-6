@@ -814,6 +814,7 @@ img {
     border-radius: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding-left: 42px;
+    outline: none;
 }
 
 .field:not(:last-child){
@@ -823,8 +824,14 @@ img {
 
 .form-icon{
     position: absolute;
-
     display: inline-block;
+    fill: currentColor;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   top: 50%;
+   left: 15px;
+   margin: 0;
 }
 
 .field label{
@@ -839,4 +846,40 @@ img {
 
 .checkbox{
     margin-bottom: 30px;
+}
+
+.field:focus-within .form-field,
+.field:hover .form-field{
+    border: 1px solid #2196F3;
+}
+
+.field:focus-within > .form-icon,
+.field:hover > .form-icon{
+    fill: #2196F3;
+}
+
+.field-checkbox{
+    appearance: none;
+}
+
+.field-checkbox:focus-within + .checkbox-icon{
+    border: 2px solid #2196F3;
+}
+
+.checkbox-icon{
+    display: inline-block;
+    margin-right: 8px;
+    padding: 0;
+    border: 2px solid #212121;
+    border-radius: 2px;
+}
+
+.field-checkbox:checked + .checkbox-icon{
+    background-color: #2196F3;
+    border: 2px solid #2196F3;
+}
+
+.field-label a{
+    color: #2196F3;
+    text-decoration: underline;
 }
